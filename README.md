@@ -13,10 +13,10 @@
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone https://github.com/wsawebmaster/docker-laravel11.git
+git clone https://github.com/wsawebmaster/docker-laravel-notes.git
 ```
 ```sh
-cd docker-laravel-11
+cd docker-laravel-notes
 ```
 
 Suba os containers do projeto
