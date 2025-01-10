@@ -56,6 +56,10 @@ exit
 Acesse o projeto
 [http://localhost:8000](http://localhost:8000)
 
+Para testes utilize
+Usuários: user1@gmail.com ou user2@gmail.com
+Senha: abc123456
+
 ---
 ---
 
@@ -63,11 +67,11 @@ Acesse o projeto
 
     docker system prune --all --force --volumes
 
-### Encerrar containers em execução
+### Remover todos os contêineres, redes e volumes definidos no arquivo docker-compose.yml
 
     docker-compose down
 
-### Remover todos os contêineres, imagens e redes em um comando
+### Remover todos os contêineres, imagens e limpar redes não utilizadas do Docker
 
     [ "$(docker ps -q)" ] && docker stop $(docker ps -q); [ "$(docker ps -aq)" ] && docker rm $(docker ps -aq); [ "$(docker images -q)" ] && docker rmi $(docker images -q); docker network prune -f
 
