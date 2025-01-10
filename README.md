@@ -62,16 +62,15 @@ Senha: abc123456
 
 ---
 ---
+### Se necessário, ajuste as permissões com:
 
-### Remove todos os objetos não utilizados no Dockes, incluindo imagens, conteineres parados, redes não utilizadas e cache de construção para liberar espaço em disco 
-
-    docker system prune --all --force --volumes
+    sudo chmod -R 755 .docker/mysql/dbdata/
 
 ### Remover todos os contêineres, redes e volumes definidos no arquivo docker-compose.yml
 
     docker-compose down
 
-### Remover todos os contêineres, imagens e limpar redes não utilizadas do Docker
+### Remover contêineres, imagens e limpar redes não utilizadas.
 
     [ "$(docker ps -q)" ] && docker stop $(docker ps -q); [ "$(docker ps -aq)" ] && docker rm $(docker ps -aq); [ "$(docker images -q)" ] && docker rmi $(docker images -q); docker network prune -f
 
